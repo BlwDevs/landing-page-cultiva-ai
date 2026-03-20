@@ -102,19 +102,19 @@ export default function Home() {
         }}
       >
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div
-              className="w-8 h-8 rounded-full flex items-center justify-center"
-              style={{ background: DS.greenPrimary }}
-            >
-              <Sprout size={16} className="text-white" />
-            </div>
-            <span
-              className="font-bold text-xl"
-              style={{ color: scrolled ? DS.textPrimary : "white" }}
-            >
-              cultiva<span style={{ color: DS.greenVibrant }}>.ai</span>
-            </span>
+          <div className="relative h-[42px] w-[160px]">
+            <img
+              src="/logoBranca.svg"
+              alt="Cultiva.ai"
+              className="absolute inset-0 h-full w-auto object-contain transition-opacity duration-300"
+              style={{ opacity: scrolled ? 0 : 1 }}
+            />
+            <img
+              src="/logoVerde.svg"
+              alt="Cultiva.ai"
+              className="absolute inset-0 h-full w-auto object-contain transition-opacity duration-300"
+              style={{ opacity: scrolled ? 1 : 0 }}
+            />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -270,29 +270,6 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="mt-10 flex items-center gap-6">
-              <div className="flex -space-x-2">
-                {["A", "B", "C", "D"].map((l, i) => (
-                  <div
-                    key={l}
-                    className="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white"
-                    style={{ background: `hsl(${130 + i * 15}, 40%, ${30 + i * 5}%)` }}
-                  >
-                    {l}
-                  </div>
-                ))}
-              </div>
-              <div>
-                <div className="flex items-center gap-1 mb-0.5">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} size={12} fill={DS.greenVibrant} color={DS.greenVibrant} />
-                  ))}
-                </div>
-                <p className="text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
-                  +500 produtores já usam
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* ── Right: phone mockup ── */}
@@ -358,7 +335,7 @@ export default function Home() {
                         className="w-10 h-10 flex items-center justify-center"
                         style={{ background: "rgba(255,255,255,0.2)", borderRadius: "16px" }}
                       >
-                        <Sprout size={20} style={{ color: "white" }} />
+                        <img src="/logoVerde.svg" alt="Cultiva.ai" className="w-5 h-5" />
                       </div>
                       <span
                         className="text-xs text-white/60 ml-auto px-2 py-0.5"
@@ -522,13 +499,7 @@ export default function Home() {
                       áudio 🎙️
                     </h2>
                     <div className="flex items-center gap-2 mt-4">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ background: DS.greenPrimary }}
-                      >
-                        <Sprout size={12} className="text-white" />
-                      </div>
-                      <span className="font-bold text-white text-sm">cultiva.ai</span>
+                      <img src="/logoVerde.svg" alt="Cultiva.ai" className="h-6" />
                     </div>
                   </div>
 
@@ -779,12 +750,11 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div
-                        className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center"
-                        style={{ background: DS.greenVibrant }}
-                      >
-                        <Sprout size={14} className="text-white" />
-                      </div>
+                      <img
+                        src="/logoVerde.svg"
+                        alt="Cultiva.ai"
+                        className="w-8 h-8 flex-shrink-0"
+                      />
                       <div
                         className="max-w-xs px-4 py-2.5 text-sm"
                         style={{
@@ -880,27 +850,27 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: DS.textPrimary }}>
-              O que os <span style={{ color: DS.greenPrimary }}>produtores</span> dizem
+              O <span style={{ color: DS.greenPrimary }}>potencial</span> do produto no mercado
             </h2>
-            <p style={{ color: DS.textSecondary }}>Mais de 500 produtores já usam o Cultiva.ai</p>
+            <p style={{ color: DS.textSecondary }}>Quem conhece o campo enxerga o valor do Cultiva.ai</p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                name: "João S.",
-                role: "Produtor de Manga – Petrolina/PE",
-                text: "Antes eu perdia horas controlando tudo em caderno. Hoje falo por áudio pro app e ele me diz o que precisa ser feito. Coisa de outro mundo!",
+                name: "Daniel Costa",
+                role: "Professor – Univasf",
+                text: "O Cultiva.ai tem um potencial enorme para transformar a gestão rural no semiárido. A combinação de IA com dados da EMBRAPA é exatamente o que o produtor precisa para tomar decisões mais assertivas.",
               },
               {
-                name: "Maria A.",
-                role: "Produtora de Acerola – Mossoró/RN",
-                text: "A importação de nota fiscal me economiza um tempo absurdo. Meu estoque sempre atualizado sem eu precisar fazer nada manualmente.",
+                name: "Luiz",
+                role: "Produtor de Manga – Vale do São Francisco",
+                text: "Quando vi o app funcionando, percebi que é isso que falta no campo. Um sistema simples, que entende a nossa rotina e organiza tudo sem complicação. O mercado tá pedindo isso.",
               },
               {
-                name: "Carlos M.",
-                role: "Produtor de Uva – Vale do São Francisco",
-                text: "Minha equipe melhorou muito depois que comecei a usar o app pra programar as atividades. Todo mundo sabe o que tem que fazer.",
+                name: "Walter",
+                role: "Cooperativa Agrícola",
+                text: "Para as cooperativas, ter uma ferramenta que centraliza safras, equipe e insumos é um diferencial competitivo real. O Cultiva.ai tem tudo para escalar e atender produtores de todos os portes.",
               },
             ].map((t, i) => (
               <AnimatedSection key={i} delay={i * 100}>
@@ -1044,15 +1014,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
-              <div
-                className="w-8 h-8 rounded-full flex items-center justify-center"
-                style={{ background: DS.greenPrimary }}
-              >
-                <Sprout size={16} className="text-white" />
-              </div>
-              <span className="font-bold text-xl">
-                cultiva<span style={{ color: DS.greenVibrant }}>.ai</span>
-              </span>
+              <img src="/logoVerde.svg" alt="Cultiva.ai" className="h-10" />
             </div>
 
             <p className="text-sm text-center" style={{ color: DS.textSecondary }}>

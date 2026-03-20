@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Cultiva.ai — Da nota fiscal ao manejo: tudo no mesmo lugar",
   description:
     "Gerencie safras, colaboradores, estoque e atividades de manejo com seu assistente de IA que responde por áudio. Baseado na EMBRAPA.",
+  icons: {
+    icon: "/logoVerde.svg",
+  },
 };
 
 export default function RootLayout({
