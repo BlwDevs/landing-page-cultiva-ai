@@ -87,7 +87,11 @@ export default function Home() {
   }, []);
 
   const ctaClick = () => {
-    document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" });
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSeuY-iZ7DYq_h2qeSKSPOSsY150KV7Wb66NHaMpwiO4MZM7OQ/viewform?usp=publish-editor",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   return (
@@ -989,6 +993,7 @@ export default function Home() {
               </div>
 
               <button
+                onClick={ctaClick}
                 className="w-full text-lg font-bold text-white transition-all hover:scale-105 glow-animation flex items-center justify-center gap-2"
                 style={{
                   background: DS.greenPrimary,
@@ -1025,7 +1030,7 @@ export default function Home() {
             <div className="flex gap-6 text-sm" style={{ color: DS.textSecondary }}>
               <a href="#" className="hover:text-white transition-colors">Privacidade</a>
               <a href="#" className="hover:text-white transition-colors">Termos</a>
-              <a href="#" className="hover:text-white transition-colors">Contato</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuY-iZ7DYq_h2qeSKSPOSsY150KV7Wb66NHaMpwiO4MZM7OQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contato</a>
             </div>
           </div>
         </div>
