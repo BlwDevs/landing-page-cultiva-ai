@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://cultiva.ai",
+    url: "https://cultivaai.blwdevs.com.br",
     title: "Cultiva.ai — Da nota fiscal ao manejo: tudo no mesmo lugar",
     description:
       "Gerencie safras, colaboradores, estoque e atividades de manejo com seu assistente de IA que responde por áudio. Baseado na EMBRAPA.",
