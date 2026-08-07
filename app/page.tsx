@@ -87,11 +87,18 @@ export default function Home() {
   }, []);
 
   const ctaClick = () => {
-    window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSeuY-iZ7DYq_h2qeSKSPOSsY150KV7Wb66NHaMpwiO4MZM7OQ/viewform?usp=publish-editor",
-      "_blank",
-      "noopener,noreferrer"
-    );
+    // window.open(
+    //   "https://docs.google.com/forms/d/e/1FAIpQLSeuY-iZ7DYq_h2qeSKSPOSsY150KV7Wb66NHaMpwiO4MZM7OQ/viewform?usp=publish-editor",
+    //   "_blank",
+    //   "noopener,noreferrer"
+    // );
+    const phone = "5587991118407";
+    const message = "Olá! Vim pelo site da Cultiva.ai e gostaria de saber mais.";
+
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank", "noopener,noreferrer");
+    
   };
 
   return (
@@ -266,6 +273,7 @@ export default function Home() {
                 />
               </button>
               <button
+                onClick={ctaClick}
                 className="flex items-center justify-center gap-2 px-8 rounded-full text-base font-medium text-white transition-all hover:bg-white/10"
                 style={{ border: "2px solid rgba(255,255,255,0.25)", height: "52px" }}
               >
